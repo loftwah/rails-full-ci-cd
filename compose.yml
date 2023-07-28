@@ -12,7 +12,7 @@ services:
     build: .
     command: bundle exec rake resque:work QUEUE='*'
     environment:
-      REDIS_URL: redis://redis:6379/0
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
     depends_on:
       - redis
   web:
@@ -28,6 +28,7 @@ services:
       - resque
     environment:
       DATABASE_URL: ${DATABASE_URL:-postgres://postgres:password@db:5432/myapp_development}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
   resque-scheduler:
     build: .
     command: bundle exec rake resque:scheduler
