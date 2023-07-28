@@ -38,6 +38,12 @@ cp .env.example .env
 docker compose up
 ```
 
+5. In a new terminal, create and migrate the database:
+
+```bash
+docker compose exec web rails db:create db:migrate
+```
+
 Your application should now be running at `localhost:3000`. Enjoy exploring the Rails Demo application!
 
 Access the Rails console with:
