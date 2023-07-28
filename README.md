@@ -45,3 +45,31 @@ Access the Rails console with:
 ```bash
 docker compose exec web rails console
 ```
+
+Test a resque job with:
+
+```ruby
+TestJob.perform_later
+```
+
+It should give you an output like this:
+
+```ruby
+Loading development environment (Rails 7.0.6)
+irb(main):001:0> TestJob.perform_later
+Enqueued TestJob (Job ID: b6741ea0-ff35-48e8-aa57-0cd27fa48ef3) to Async(default)
+=> 
+#<TestJob:0x0000ffffb4fa3d68
+ @arguments=[],
+ @exception_executions={},
+ @executions=0,
+ @job_id="b6741ea0-ff35-48e8-aa57-0cd27fa48ef3",
+ @priority=nil,
+ @provider_job_id="b8ec361e-229f-4272-bc44-2ad31c2d947c",
+ @queue_name="default",
+ @successfully_enqueued=true,
+ @timezone="UTC">
+irb(main):002:0> Performing TestJob (Job ID: b6741ea0-ff35-48e8-aa57-0cd27fa48ef3) from Async(default) enqueued at 2023-07-28T07:49:52Z
+Running test job - Loftwah was here
+Performed TestJob (Job ID: b6741ea0-ff35-48e8-aa57-0cd27fa48ef3) from Async(default) in 6.96ms
+```
