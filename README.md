@@ -39,3 +39,9 @@ docker compose up
 ```
 
 Your application should now be running at `localhost:3000`. Enjoy exploring the Rails Demo application!
+
+Access the Rails console with:
+
+```bash
+docker compose exec web rails console
+```
