@@ -126,3 +126,26 @@ resque_1  |
 resque_1  | (called from /usr/local/bundle/gems/redis-namespace-1.11.0/lib/redis/namespace.rb:564:in `wrapped_send'}
 resque_1  | Redis#sadd will always return an Integer in Redis 5.0.0. Use Redis#sadd? instead.(called from: /usr/local/bundle/gems/redis-namespace-1.11.0/lib/redis/namespace.rb:564:in `wrapped_send')
 ```
+
+# To do
+
+This is what I need to do from here.
+
+I get this warning from resque I need to figure out.
+
+```bash
+resque_1            | Running test job - Loftwah was here
+resque_1            | Pipelining commands on a Redis instance is deprecated and will be removed in Redis 5.0.0.
+resque_1            | 
+resque_1            | redis.pipelined do
+resque_1            |   redis.get("key")
+resque_1            | end
+resque_1            | 
+resque_1            | should be replaced by
+resque_1            | 
+resque_1            | redis.pipelined do |pipeline|
+resque_1            |   pipeline.get("key")
+resque_1            | end
+resque_1            | 
+resque_1            | (called from /usr/local/bundle/gems/redis-namespace-1.11.0/lib/redis/namespace.rb:564:in `wrapped_send'}
+```
