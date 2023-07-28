@@ -1,24 +1,5 @@
-# README
+# Loftwah's Rails Demo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a demo app for Rails. I will do random stuff here so please don't use it for anything you care about.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The info for this is [here](https://github.com/loftwah/tech-101/tree/main/misc/drills/3-rails-full-ci-cd)
