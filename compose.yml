@@ -29,6 +29,8 @@ services:
     environment:
       DATABASE_URL: ${DATABASE_URL:-postgres://postgres:password@db:5432/myapp_development}
       REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      GITHUB_APP_ID: ${GITHUB_APP_ID}
+      GITHUB_APP_SECRET: ${GITHUB_APP_SECRET}
   resque-scheduler:
     build: .
     command: bundle exec rake resque:scheduler
