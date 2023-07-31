@@ -1,2 +1,14 @@
-<h1>Home</h1>
-<%= link_to "Sign in with GitHub", user_github_omniauth_authorize_path %>
+<h1>Welcome to our home page!</h1>
+
+<p>Feel free to browse around and learn more about us.</p>
+
+<!-- Check if the user is logged in -->
+<% if user_signed_in? %>
+  <p>Welcome back, <%= current_user.name %>!</p>
+  <%= link_to 'Edit profile', edit_user_registration_path %>
+  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign in", new_user_session_path %>
+  <%= link_to "Sign up", new_user_registration_path %>
+  <%= link_to "Sign in with GitHub", user_github_omniauth_authorize_path %>
+<% end %>
