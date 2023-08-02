@@ -1,2 +1,5 @@
-<%= f.label :username %>
-<%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email, autofocus: true, autocomplete: "email" %>
+  <!-- Include other form fields and a submit button -->
+<% end %>
