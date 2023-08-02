@@ -19,6 +19,8 @@ gem "bootsnap", require: false
 gem "devise"
 gem "omniauth"
 gem "omniauth-github"
+# gem 'pry'
+gem "byebug"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
