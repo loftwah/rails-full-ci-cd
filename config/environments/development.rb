@@ -61,6 +61,7 @@ Rails.application.configure do
 
   # Allow connections from docker network
   config.web_console.permissions = '172.0.0.0/8'
+  config.hosts << ".loca.lt"
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
