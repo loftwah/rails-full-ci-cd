@@ -151,3 +151,11 @@ docker compose exec web rails console
 AdminUser.create!(email: 'dean@deanlofts.xyz', password: 'password', password_confirmation: 'password')
 docker compose exec web rails generate active_admin:resource User
 ```
+
+## Compile Sass
+
+To compile Sass, run the following command:
+
+```bash
+docker compose exec web rails css:install:sass
+```
