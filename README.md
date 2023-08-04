@@ -141,3 +141,13 @@ resque_1            | end
 resque_1            | 
 resque_1            | (called from /usr/local/bundle/gems/redis-namespace-1.11.0/lib/redis/namespace.rb:564:in `wrapped_send'}
 ```
+
+## Admin user
+
+To create an admin user, run the following command:
+
+```bash
+docker compose exec web rails console
+AdminUser.create!(email: 'dean@deanlofts.xyz', password: 'password', password_confirmation: 'password')
+docker compose exec web rails generate active_admin:resource User
+```

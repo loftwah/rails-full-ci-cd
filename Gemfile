@@ -21,6 +21,7 @@ gem "omniauth"
 gem "omniauth-github"
 # gem 'pry'
 gem "byebug"
+gem "activeadmin"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

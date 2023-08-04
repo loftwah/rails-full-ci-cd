@@ -16,4 +16,12 @@ class User < ApplicationRecord
       # if the user's email is not verified on Github you need to handle this in the User model
     end
   end
+  
+  def self.ransackable_attributes(auth_object = nil)
+    %w[id email username] # add other attributes as needed, but exclude sensitive ones
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    %w[links milestones events testimonies] # add other associations as needed
+  end
 end
