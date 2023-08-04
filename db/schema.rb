@@ -10,9 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_02_070808) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_04_074854) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "events_name"
+    t.text "events_description"
+    t.string "events_url"
+    t.datetime "events_start_date"
+    t.datetime "events_end_date"
+    t.decimal "events_ticket_price"
+    t.boolean "events_virtual"
+    t.string "events_color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.text "links_group"
+    t.string "links_url"
+    t.string "links_display_name"
+    t.string "links_icon"
+    t.boolean "links_enabled"
+    t.boolean "links_pinned"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_links_on_user_id"
+  end
+
+  create_table "milestones", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "milestones_title"
+    t.text "milestones_description"
+    t.string "milestones_url"
+    t.date "milestones_date"
+    t.string "milestones_icon"
+    t.boolean "milestones_future"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_milestones_on_user_id"
+  end
+
+  create_table "testimonies", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "testimony_from_user"
+    t.string "testimony_title"
+    t.text "testimony_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_testimonies_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -30,4 +81,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_070808) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "events", "users"
+  add_foreign_key "links", "users"
+  add_foreign_key "milestones", "users"
+  add_foreign_key "testimonies", "users"
 end

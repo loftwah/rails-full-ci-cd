@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  milestones_title: MyString
+  milestones_description: MyText
+  milestones_url: MyString
+  milestones_date: 2023-08-04
+  milestones_icon: MyString
+  milestones_future: false
+
+two:
+  user: two
+  milestones_title: MyString
+  milestones_description: MyText
+  milestones_url: MyString
+  milestones_date: 2023-08-04
+  milestones_icon: MyString
+  milestones_future: false

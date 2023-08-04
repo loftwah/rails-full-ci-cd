@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  events_name: MyString
+  events_description: MyText
+  events_url: MyString
+  events_start_date: 2023-08-04 07:48:42
+  events_end_date: 2023-08-04 07:48:42
+  events_ticket_price: 9.99
+  events_virtual: false
+  events_color: MyString
+
+two:
+  user: two
+  events_name: MyString
+  events_description: MyText
+  events_url: MyString
+  events_start_date: 2023-08-04 07:48:42
+  events_end_date: 2023-08-04 07:48:42
+  events_ticket_price: 9.99
+  events_virtual: false
+  events_color: MyString

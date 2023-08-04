@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  links_group: MyText
+  links_url: MyString
+  links_display_name: MyString
+  links_icon: MyString
+  links_enabled: false
+  links_pinned: false
+
+two:
+  user: two
+  links_group: MyText
+  links_url: MyString
+  links_display_name: MyString
+  links_icon: MyString
+  links_enabled: false
+  links_pinned: false

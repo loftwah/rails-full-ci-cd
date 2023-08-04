@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  testimony_from_user: MyString
+  testimony_title: MyString
+  testimony_description: MyText
+
+two:
+  user: two
+  testimony_from_user: MyString
+  testimony_title: MyString
+  testimony_description: MyText
