@@ -1,7 +1,7 @@
-<h1>Loftwah's Demo Rails App!</h1>
+<h1>Loftwah's LinkFree Clone</h1>
 <!-- Check if the user is logged in -->
 <% if user_signed_in? %>
-  <h2>Hi there!</h2>
+  <h2>Hi there! This is a simple clone of LinkFree in Rails for demo purposes.</h2>
   <p>Welcome back, <%= current_user.email %>!</p>
   <%= link_to 'Edit profile', edit_user_registration_path %>
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
