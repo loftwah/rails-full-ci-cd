@@ -22,6 +22,9 @@ gem "omniauth-github"
 # gem 'pry'
 gem "byebug"
 gem "activeadmin"
+gem 'cssbundling-rails'
+gem 'sass'
+gem 'sassc'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

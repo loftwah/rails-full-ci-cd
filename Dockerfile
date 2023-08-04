@@ -2,7 +2,9 @@
 FROM ruby:3.2.2
 
 # Install dependencies
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client npm
+RUN npm install yarn -g
+RUN npm install npx -g
 RUN gem install bundler
 
 # Set work directory
