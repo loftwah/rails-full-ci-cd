@@ -21,7 +21,7 @@ gem "omniauth"
 gem "omniauth-github"
 # gem 'pry'
 gem "byebug"
-gem 'rails_admin'
+# gem 'rails_admin'
 gem 'cssbundling-rails'
 gem 'sass'
 gem 'sassc'
