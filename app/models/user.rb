@@ -8,6 +8,11 @@ class User < ApplicationRecord
   has_many :events
   has_many :testimonies
 
+  accepts_nested_attributes_for :links, allow_destroy: true
+  accepts_nested_attributes_for :milestones, allow_destroy: true
+  accepts_nested_attributes_for :events, allow_destroy: true
+  accepts_nested_attributes_for :testimonies, allow_destroy: true
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email

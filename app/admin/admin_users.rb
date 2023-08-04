@@ -6,6 +6,8 @@ ActiveAdmin.register AdminUser do
     id_column
     column :email
     column :current_sign_in_at
+    column :last_sign_in_at
+    column :last_sign_in_ip
     column :sign_in_count
     column :created_at
     actions
@@ -13,6 +15,8 @@ ActiveAdmin.register AdminUser do
 
   filter :email
   filter :current_sign_in_at
+  filter :last_sign_in_at
+  filter :last_sign_in_ip
   filter :sign_in_count
   filter :created_at
 
@@ -24,5 +28,4 @@ ActiveAdmin.register AdminUser do
     end
     f.actions
   end
-
 end
